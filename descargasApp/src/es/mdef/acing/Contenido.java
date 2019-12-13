@@ -1,11 +1,29 @@
 package es.mdef.acing;
 
-public abstract class Contenido {
-	private String titulo;
+public class Contenido {
+	
 	private Identificador id;
+	private String titulo;
 	
-	Contenido(String titulo, Identificador id);
-		
+	public Identificador getId() {
+		return id;
+	}
 	
+//	private void setId(Identificador id) {
+//		this.id = id;
+//	}
 	
+	public String getTitulo() {
+		return titulo;
+	}
+
+//	private void setTitulo(String titulo) {
+//		this.titulo = titulo;
+//	}
+//
+
+	public Contenido (Identificador id, String titulo) {
+		this.id = id;
+		this.titulo = titulo;
+	}
 }

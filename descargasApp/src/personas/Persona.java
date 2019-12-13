@@ -1,14 +1,15 @@
 package personas;
 
+import java.util.List;
+
 public class Persona {
 	
 	private String nombre;
 	private String apellidos;
-	private Nacionalidad nacionalidad;
-	private boolean sexo;
-	private int anioNacimiento;
+	private List<String> nacionalidad;
+
 	
-	public Persona (String nombre, String apellidos, Nacionalidad nacionalidad) {
+	public Persona (String nombre, String apellidos, List<String> nacionalidad) {
 		this.nombre=nombre;
 		this.apellidos=apellidos;
 		this.nacionalidad = nacionalidad;
@@ -22,29 +23,12 @@ public class Persona {
 		return apellidos;
 	}
 
-	public Nacionalidad getNacionalidad() {
+	public List<String> getNacionalidad() {
 		return nacionalidad;
-	}
-
-	public String getSexo() {
-		String sexo = "masculino";
-		if (this.sexo) {
-			sexo = "masculino";
-		} else {
-			sexo = "femenino";
-		}		
-		return sexo;
-		
-	}
-
-	public int getAnioNacimiento() {
-		return anioNacimiento;
 	}
 
 	public String mostrarPersona () {
 		return "Nombre: " + getNombre() + "\nApellidos: " + getApellidos() + 
-				"\nNacionalidad: " + getNacionalidad().mostrarNacionalidad() +
-				"\nAño de nacimiento: " + getAnioNacimiento() +
-				"\nSexo: "+ getSexo();
+				"\nNacionalidad: " + getNacionalidad();
 	}
 }
