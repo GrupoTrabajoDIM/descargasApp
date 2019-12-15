@@ -8,14 +8,6 @@ public class Artista extends Persona {
 	private ArrayList<String> grupos;
 	private ArrayList<String> estilos;
 
-	
-	public Artista(String nombre, String apellidos, List<String> nacionalidad,
-			ArrayList<String> grupos, ArrayList<String> estilos) {
-		super(nombre, apellidos, nacionalidad);
-		this.grupos = grupos;
-		this.estilos = estilos;
-	
-	}
 	public void agregarGrupo (ArrayList<String> grupos, String nombreGrupo) {
 		grupos.add(nombreGrupo);
 	}
@@ -39,10 +31,16 @@ public class Artista extends Persona {
 	}
 
 	public String mostrarArtista () {
-		return super.mostrarPersona() +	"\nForma parte de los siguientes grupos musicales: "+ grupos.toString()+
-				"\nLos estilos musicales que tiene son: "+estilos.toString();
+		return super.mostrarPersona() +	"\nGrupos musicales: "+ grupos.toString()+
+				"\nEstilo musical: "+estilos.toString();
 	}
+	public Artista(String nombre, String apellidos, List<String> nacionalidad,
+			ArrayList<String> grupos, ArrayList<String> estilos) {
+		super(nombre, apellidos, nacionalidad);
+		this.grupos = grupos;
+		this.estilos = estilos;
 	
+	}
 }
 	
 

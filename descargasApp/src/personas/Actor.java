@@ -12,7 +12,7 @@ public class Actor extends Persona{
 		return estilos;
 	}
 
-	public void agregarEstilo (ArrayList<String> estilos, String estilo) {
+	public void agregarEstilo (String estilo) {
 		estilos.add(estilo);
 	}
 	
@@ -25,7 +25,7 @@ public class Actor extends Persona{
 	}
 	
 	public String mostrarActor () {
-		return super.mostrarPersona() + "\nLos estilos son: " + estilos.toString();
+		return super.mostrarPersona() + ", especializado en papeles de: " + estilos.toString()+"\n";
 	}
 	
 	public Actor(String nombre, String apellidos, List<String> nacionalidad, ArrayList<String> estilos) {

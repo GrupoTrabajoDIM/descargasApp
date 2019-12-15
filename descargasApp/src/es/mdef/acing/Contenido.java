@@ -21,7 +21,9 @@ public class Contenido {
 //		this.titulo = titulo;
 //	}
 //
-
+	public String mostraContenido () {
+		return "\n* Id " + getId().getValor() + ", Título: " + getTitulo();
+	}
 	public Contenido (Identificador id, String titulo) {
 		this.id = id;
 		this.titulo = titulo;

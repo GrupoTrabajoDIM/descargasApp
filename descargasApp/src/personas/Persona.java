@@ -26,9 +26,12 @@ public class Persona {
 	public List<String> getNacionalidad() {
 		return nacionalidad;
 	}
-
+	
+	public void anadirNacionalidad (String nacionalidad) {
+		this.nacionalidad.add(nacionalidad);
+	}
 	public String mostrarPersona () {
-		return "Nombre: " + getNombre() + "\nApellidos: " + getApellidos() + 
-				"\nNacionalidad: " + getNacionalidad();
+		return getNombre() + " " + getApellidos() + 
+				", nacionalidad: " + getNacionalidad();
 	}
 }

@@ -15,7 +15,7 @@ public class Director extends Persona{
 		this.generos = generos;
 	}
 
-	public void agregarGenero (ArrayList<String> generos, String nombreGenero) {
+	public void agregarGenero (String nombreGenero) {
 		generos.add(nombreGenero);
 	}
 	public void eliminarGenero (String nombreGenero) {
@@ -27,7 +27,7 @@ public class Director extends Persona{
 	}
 
 	public String mostrarDirector () {
-		return super.mostrarPersona() + "\nLos géneros de sus peliculas son: " + getGeneros().toString();
+		return super.mostrarPersona() + ", sus géneros son: " + getGeneros().toString();
 	}
 	public Director (String nombre, String apellidos, List<String> nacionalidad, ArrayList<String> generos) {
 	
